@@ -1,9 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block header %}
-    <header>
-    <a href="{{ path('main_home') }}">Accueil</a>
         <nav>
+            <a href="{{ path('main_home') }}">Accueil</a>
             <ul>
                 {% if app.user %}
                     <li>{{ app.user.pseudo }}</li>
@@ -15,5 +14,4 @@
                 {% endif %}
             </ul>
         </nav>
-    </header>
 {% endblock %}

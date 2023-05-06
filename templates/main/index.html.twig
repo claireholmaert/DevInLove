@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block header %}
-    <h1><a href="{{ path('main_home') }}">Dev In Love</a></h1>
-    <h2>Parce que même les développeurs ont besoin d'amour</h2>
-    <img src="{{ asset('../img/i_love_geeks.png') }}" alt="image principale du site avec un texte et un coeur">
+    <header>
+        <h1><a href="{{ path('main_home') }}">Dev In Love</a></h1>
+        <h2>Parce que même les développeurs ont besoin d'amour</h2>
+        <img src="{{ asset('../img/i_love_geeks.png') }}" alt="image principale du site avec un texte et un coeur">
+    </header>
 {% endblock %}

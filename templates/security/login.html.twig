@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block header %}Log in!{% endblock %}
+{% block header %}
+    <div class="login">
+        <a href="{{ path('main_home') }}">Accueil</a>
+        <p>Log in!</p>
+    </div>
+{% endblock %}
 
 {% block main %}
 <form method="post">
