@@ -42,3 +42,48 @@ a {
 }
 
 
+//---------navbar main home--------
+.login_main_home{
+  color: #000000;
+  background-color: rgba(32, 203, 175, 0.55);
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid rgba(32, 203, 175, 0.55);
+  &:hover{
+    background:linear-gradient(to bottom, #2cffdd 5%, #43a697 100%);
+    border: 1px solid #b6b5b5;
+  }
+}
+.enregistrer{
+  color: white;
+  background-color: #a8a7a7;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #a8a7a7;
+  &:hover{
+    background:linear-gradient(to bottom, lightgray 5%, #565454 100%);
+    border: 1px solid #605f5f;
+  }
+}
+.a_main_home{
+  color: black;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+//text sur la page home
+.div_text_main_home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+
+}
+.text_main_home{
+  p{
+    font-size: 1.9em;
+    color: lightgray;
+  }
+}
+//--------------fin css navbar-------
+

@@ -2,16 +2,23 @@
 
 {% block header %}
         <nav>
-            <a href="{{ path('main_home') }}">Accueil</a>
+            <a href="{{ path('main_home') }}" class="a_main_home">Accueil</a>
             <ul>
                 {% if app.user %}
                     <li>{{ app.user.pseudo }}</li>
                     <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
                 {% endif %}
                 {% if not app.user %}
-                    <li><a href="{{ path('app_login') }}">Se connecter</a></li>
-                    <li><a href="{{ path('register_register') }}">S'enregistrer</a></li>
+                    <li><a href="{{ path('app_login') }}" class="login_main_home">Se connecter</a></li>
+                    <li><a href="{{ path('register_register') }}" class="enregistrer">S'enregistrer</a></li>
                 {% endif %}
             </ul>
         </nav>
+{% endblock %}
+{% block main %}
+    <div class="div_text_main_home">
+        <div class="text_main_home">
+            <p>&lt;?php echo 'Hello World'; ?&gt;</p>
+        </div>
+    </div>
 {% endblock %}
