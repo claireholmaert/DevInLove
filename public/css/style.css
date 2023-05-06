@@ -1,3 +1,7 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -18,7 +22,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #93c5fd;
+  color: #3b82f6;
 }
 
 /*# sourceMappingURL=style.css.map */
