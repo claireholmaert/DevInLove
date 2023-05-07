@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\DeveloppeurRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,8 +20,15 @@ class MainController extends AbstractController
 
     #[Route('/home',
         name: '_home')]
-    public function home(): Response
+    public function home(
+        DeveloppeurRepository $developpeurRepository
+    ): Response
     {
-        return $this->render('home/index.html.twig');
+        //compte les developpeurs en BDD
+        $tableauDev = $developpeurRepository->findAll();
+        $tableauDevCompter = count($tableauDev);
+        return $this->render('home/index.html.twig',
+            compact('tableauDevCompter')
+        );
     }
 }

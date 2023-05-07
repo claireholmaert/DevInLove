@@ -17,7 +17,7 @@
 {% endblock %}
 {% block main %}
     {% if app.user %}
-{#        Tableau de gens connecter#}
+        <p> {{ tableauDevCompter }} {{ tableauDevCompter == 1 ? 'développeur' : 'développeurs' }} en base de données</p>
 
     {% endif %}
     {% if not app.user %}
