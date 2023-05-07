@@ -17,8 +17,21 @@
 {% endblock %}
 {% block main %}
     {% if app.user %}
-        <p> {{ tableauDevCompter }} {{ tableauDevCompter == 1 ? 'développeur' : 'développeurs' }} en base de données</p>
-
+        <div class="section_langage_main">
+            <p>Filtre par langage :
+            {% for lang in langages %}
+                <button class="btn_filtre_langage">{{ lang.nom }}</button>
+            {% endfor %}
+            </p>
+        </div>
+        <div class="text_app_user_index">
+            <p> {{ tableauDevCompter }} {{ tableauDevCompter == 1 ? 'développeur' : 'développeurs' }} en base de données</p>
+        </div>
+        {% for dev in tableauDev %}
+            {% if dev.pseudo != app.user.pseudo %}
+                {{ dev.pseudo }} <br>
+            {% endif %}
+        {% endfor %}
     {% endif %}
     {% if not app.user %}
         <div class="div_text_main_home">

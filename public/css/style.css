@@ -83,6 +83,23 @@ a {
   color: lightgray;
 }
 
+.section_langage_main {
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.1);
+}
+.section_langage_main .btn_filtre_langage {
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid white;
+  color: #1a589b;
+  cursor: pointer;
+}
+.section_langage_main .btn_filtre_langage:hover {
+  text-decoration: underline;
+}
+
 .login {
   margin: 20px 10px;
 }

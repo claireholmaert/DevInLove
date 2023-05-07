@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\DeveloppeurRepository;
+use App\Repository\LangageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,14 +22,19 @@ class MainController extends AbstractController
     #[Route('/home',
         name: '_home')]
     public function home(
-        DeveloppeurRepository $developpeurRepository
+        DeveloppeurRepository $developpeurRepository,
+        LangageRepository $langageRepository
     ): Response
     {
-        //compte les developpeurs en BDD
+        //Avoir tous les développeurs dans la table developpeur
         $tableauDev = $developpeurRepository->findAll();
+        //compte les developpeurs en BDD
         $tableauDevCompter = count($tableauDev);
+        //Tous les langages dans la table
+        $langages = $langageRepository->findAll();
         return $this->render('home/index.html.twig',
-            compact('tableauDevCompter')
+            compact('tableauDevCompter','tableauDev','langages')
+
         );
     }
 }
