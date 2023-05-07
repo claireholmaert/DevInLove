@@ -16,9 +16,16 @@
         </nav>
 {% endblock %}
 {% block main %}
-    <div class="div_text_main_home">
-        <div class="text_main_home">
-            <p>&lt;?php echo 'Hello World'; ?&gt;</p>
+    {% if app.user %}
+{#        Tableau de gens connecter#}
+
+    {% endif %}
+    {% if not app.user %}
+        <div class="div_text_main_home">
+            <div class="text_main_home">
+                <p>&lt;?php echo 'Hello World'; ?&gt;</p>
+            </div>
         </div>
-    </div>
+    {% endif %}
+
 {% endblock %}

@@ -7,17 +7,37 @@
 {% endblock %}
 
 {% block main %}
-    <h1>Créer un compte</h1>
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.pseudo) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Mot de passe :'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms, {
-            label: 'Conditions d\'utilisations :'
-        }) }}
+    <div class="div_main_register">
+        <div class="div_register">
+            <h1>Créer un compte</h1>
+            {{ form_start(registrationForm) }}
+            <div class="registration_pseudo">
+            {{ form_row(registrationForm.pseudo, {
+                label: 'Pseudo'
+            }) }}
+            </div>
+            <div class="registration_email">
+            {{ form_row(registrationForm.email, {
+                label: 'Email '
+            }) }}
+            </div>
+            <div class="registration_password">
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Mot de passe '
+                }) }}
+            </div>
+            <div class="registration_agreeTerm">
+                {{ form_row(registrationForm.agreeTerms, {
+                    label: 'Conditions d\'utilisations '
+                }) }}
+            </div>
 
-        <button type="submit" class="btn btn_formulaire">S'enregistrer</button>
-    {{ form_end(registrationForm) }}
+            <div class="btn_submit_register">
+                <button type="submit" class="btn btn_formulaire">S'enregistrer</button>
+                {{ form_end(registrationForm) }}
+            </div>
+
+        </div>
+    </div>
+
 {% endblock %}
