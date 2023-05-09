@@ -1,15 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block main %}
-    <h1>Register</h1>
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.pseudo) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+{% block header %}
+    <div class="login">
+        <a href="{{ path('main_home') }}">Accueil</a>
+    </div>
+{% endblock %}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+{% block main %}
+    <div class="div_main_register">
+        <div class="div_register">
+            <h1>Créer un compte</h1>
+            {{ form_start(registrationForm) }}
+            <div class="registration_pseudo">
+            {{ form_row(registrationForm.pseudo, {
+                label: 'Pseudo'
+            }) }}
+            </div>
+            <div class="registration_email">
+            {{ form_row(registrationForm.email, {
+                label: 'Email '
+            }) }}
+            </div>
+            <div class="registration_password">
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Mot de passe '
+                }) }}
+            </div>
+            <div class="registration_agreeTerm">
+                {{ form_row(registrationForm.agreeTerms, {
+                    label: 'Conditions d\'utilisations '
+                }) }}
+            </div>
+
+            <div class="btn_submit_register">
+                <button type="submit" class="btn btn_formulaire">S'enregistrer</button>
+                {{ form_end(registrationForm) }}
+            </div>
+
+        </div>
+    </div>
+
 {% endblock %}

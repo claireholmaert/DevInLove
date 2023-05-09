@@ -41,4 +41,153 @@ a {
   color: #3b82f6;
 }
 
+.login_main_home {
+  color: #000000;
+  background-color: rgba(32, 203, 175, 0.55);
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid rgba(32, 203, 175, 0.55);
+}
+.login_main_home:hover {
+  background: linear-gradient(to bottom, #2cffdd 5%, #43a697 100%);
+  border: 1px solid #b6b5b5;
+}
+
+.enregistrer {
+  color: white;
+  background-color: #a8a7a7;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #a8a7a7;
+}
+.enregistrer:hover {
+  background: linear-gradient(to bottom, lightgray 5%, #565454 100%);
+  border: 1px solid #605f5f;
+}
+
+.a_main_home {
+  color: black;
+}
+.a_main_home:hover {
+  text-decoration: underline;
+}
+
+.div_text_main_home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.div_text_main_home .text_main_home p {
+  font-size: 1.9em;
+  color: lightgray;
+}
+
+.section_langage_main {
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.1);
+}
+.section_langage_main .btn_filtre_langage {
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid white;
+  color: #1a589b;
+  cursor: pointer;
+}
+.section_langage_main .btn_filtre_langage:hover {
+  text-decoration: underline;
+}
+
+.login {
+  margin: 20px 10px;
+}
+.login a {
+  color: black;
+}
+.login a:hover {
+  text-decoration: underline;
+}
+
+.div_blockmain_login {
+  display: flex;
+  margin-top: 50px;
+}
+.div_blockmain_login .div_formulaire_login {
+  margin: auto;
+}
+.div_blockmain_login .div_formulaire_login .h1_formulaire_login {
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+.div_blockmain_login .div_formulaire_login .div_email_login {
+  text-align: end;
+  margin: 10px;
+}
+.div_blockmain_login .div_formulaire_login .div_password_login {
+  text-align: end;
+  margin: 10px;
+}
+.div_blockmain_login .div_formulaire_login .btn_submit_login {
+  text-align: center;
+}
+.div_blockmain_login .div_formulaire_login button {
+  padding: 6px;
+  color: #03bea7;
+  background-color: white;
+  border: 1px solid #03bea7;
+  border-radius: 5px;
+}
+.div_blockmain_login .div_formulaire_login button:hover {
+  background-color: #03bea7;
+  color: white;
+  box-shadow: 2px 2px 10px -5px #000000;
+}
+
+.div_main_register {
+  display: flex;
+}
+.div_main_register .div_register {
+  margin: auto;
+}
+.div_main_register h1 {
+  text-align: center;
+}
+.div_main_register .registration_pseudo {
+  text-align: end;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+.div_main_register .registration_email {
+  text-align: end;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+.div_main_register .registration_password {
+  text-align: end;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+.div_main_register .registration_agreeTerm {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.div_main_register .btn_submit_register {
+  text-align: center;
+}
+.div_main_register .btn_submit_register button {
+  padding: 6px;
+  color: #03bea7;
+  background-color: white;
+  border: 1px solid #03bea7;
+  border-radius: 5px;
+}
+.div_main_register .btn_submit_register button:hover {
+  background-color: #03bea7;
+  color: white;
+  box-shadow: 2px 2px 10px -5px #000000;
+}
+
 /*# sourceMappingURL=style.css.map */

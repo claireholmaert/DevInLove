@@ -42,3 +42,163 @@ a {
 }
 
 
+//---------navbar main home--------
+
+.login_main_home{
+  color: #000000;
+  background-color: rgba(32, 203, 175, 0.55);
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid rgba(32, 203, 175, 0.55);
+  &:hover{
+    background:linear-gradient(to bottom, #2cffdd 5%, #43a697 100%);
+    border: 1px solid #b6b5b5;
+  }
+}
+
+.enregistrer{
+  color: white;
+  background-color: #a8a7a7;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #a8a7a7;
+  &:hover{
+    background:linear-gradient(to bottom, lightgray 5%, #565454 100%);
+    border: 1px solid #605f5f;
+  }
+}
+
+.a_main_home{
+  color: black;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+//text sur la page home
+.div_text_main_home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  .text_main_home{
+    p{
+      font-size: 1.9em;
+      color: lightgray;
+    }
+  }
+}
+.section_langage_main{
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 60px 10px rgba(0,0,0,0.1);
+  .btn_filtre_langage{
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid white;
+    color: #1a589b;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+//--------------fin css navbar-------
+
+//------------Page Login------------
+.login{
+  margin: 20px 10px;
+  a{
+    color: black;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.div_blockmain_login{
+  display: flex;
+  margin-top: 50px;
+  .div_formulaire_login{
+    margin: auto;
+    .h1_formulaire_login{
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+    }
+    .div_email_login{
+      text-align: end;
+      margin: 10px;
+    }
+    .div_password_login{
+      text-align: end;
+      margin: 10px;
+    }
+    .btn_submit_login{
+      text-align: center;
+    }
+    button{
+      padding: 6px;
+      color: #03bea7;
+      background-color: white;
+      border: 1px solid #03bea7;
+      border-radius: 5px;
+      &:hover{
+        background-color: #03bea7;
+        color: white;
+        box-shadow: 2px 2px 10px -5px #000000;
+      }
+    }
+  }
+}
+//------------fin page login------------
+
+//------------page register --------------
+.div_main_register{
+  display: flex;
+  .div_register{
+    margin: auto;
+  }
+  h1{
+    text-align: center;
+  }
+  .registration_pseudo{
+    text-align: end;
+    margin-right: 50px;
+    margin-bottom: 10px;
+  }
+  .registration_email{
+    text-align: end;
+
+    margin-right: 50px;
+    margin-bottom: 10px;
+  }
+  .registration_password{
+    text-align: end;
+    margin-right: 50px;
+    margin-bottom: 10px;
+  }
+  .registration_agreeTerm{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .btn_submit_register{
+    text-align: center;
+    button{
+      padding: 6px;
+      color: #03bea7;
+      background-color: white;
+      border: 1px solid #03bea7;
+      border-radius: 5px;
+      &:hover{
+        background-color: #03bea7;
+        color: white;
+        box-shadow: 2px 2px 10px -5px #000000;
+      }
+    }
+  }
+}
+//-----------fin page register------------

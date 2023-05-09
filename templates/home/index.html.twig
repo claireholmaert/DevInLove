@@ -2,16 +2,43 @@
 
 {% block header %}
         <nav>
-            <a href="{{ path('main_home') }}">Accueil</a>
+            <a href="{{ path('main_home') }}" class="a_main_home">Accueil</a>
             <ul>
                 {% if app.user %}
                     <li>{{ app.user.pseudo }}</li>
                     <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
                 {% endif %}
                 {% if not app.user %}
-                    <li><a href="{{ path('app_login') }}">Se connecter</a></li>
-                    <li><a href="{{ path('register_register') }}">S'enregistrer</a></li>
+                    <li><a href="{{ path('app_login') }}" class="login_main_home">Se connecter</a></li>
+                    <li><a href="{{ path('register_register') }}" class="enregistrer">S'enregistrer</a></li>
                 {% endif %}
             </ul>
         </nav>
+{% endblock %}
+{% block main %}
+    {% if app.user %}
+        <div class="section_langage_main">
+            <p>Filtre par langage :
+            {% for lang in langages %}
+                <button class="btn_filtre_langage">{{ lang.nom }}</button>
+            {% endfor %}
+            </p>
+        </div>
+        <div class="text_app_user_index">
+            <p> {{ tableauDevCompter }} {{ tableauDevCompter == 1 ? 'développeur' : 'développeurs' }} en base de données</p>
+        </div>
+        {% for dev in tableauDev %}
+            {% if dev.pseudo != app.user.pseudo %}
+                {{ dev.pseudo }} <br>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% if not app.user %}
+        <div class="div_text_main_home">
+            <div class="text_main_home">
+                <p>&lt;?php echo 'Hello World'; ?&gt;</p>
+            </div>
+        </div>
+    {% endif %}
+
 {% endblock %}
